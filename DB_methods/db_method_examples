@@ -1,0 +1,44 @@
+  def get_enabled_app_versions_from_database(application_name)
+    begin
+      con = get_bot_connection()
+      in_transaction(con) do
+        rs = con.query("SELECT version FROM ApplicationVersion WHERE application_id = (SELECT Application.ID FROM Application WHERE title = '#{application_name}') AND enabled = 1;")
+        number = rs.num_rows
+        app_versions =[]
+        number.times do
+          app_versions << rs.fetch_row.join(",")
+        end
+        return app_versions
+      end
+    ensure
+      con.close if con
+    end
+  end
+
+  def get_list_of_data_centers_per_cloud(cloud_name)
+    begin
+      con = get_bot_connection()
+      in_transaction(con) do
+        rs = con.query("SELECT DataCenter.name FROM DataCenter LEFT JOIN Cloud ON DataCenter.cloud_id = Cloud.id WHERE Cloud.friendlyName = '#{cloud_name}' AND DataCenter.isEnabled = 1 AND DataCenter.isDeleted = 0 AND Cloud.isEnabled = 1 AND Cloud.isDeleted = 0;")
+        # puts rs.inspect
+        number = rs.num_rows
+        data_centers =[]
+        number.times do
+          data_centers << rs.fetch_row.join(",")
+        end
+        return data_centers
+      end
+    ensure
+      con.close if con
+    end
+  end
+
+  def get_database_value(property, table, column, value, extra_params='')
+    received_value = nil
+    begin
+      con = get_bot_connection()
+      in_transaction(con) do
+        rs = con.query("SELECT #{property} FROM #{table} WHERE #{column} = '#{value}' #{extra_params};")
+        results = rs.fetch_hash
+        received_value = results.nil? ? nil : results[property]
+      end
