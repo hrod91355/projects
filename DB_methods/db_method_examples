@@ -1,3 +1,23 @@
+    def get_bot_connection
+    con = nil
+    begin
+      con = get_connection(@bot_dbhost, @bot_username, @bot_password)
+    rescue Mysql::Error => error
+      #bot user doesn't exist, so create it
+      if error.message =~ /^Access denied for user '.*'@.*$/
+        create_bot_user()
+        con = get_connection(@bot_dbhost, @bot_username, @bot_password)
+      end
+    rescue Exception => ex
+      raise Exception, "Got exception creating bot user: #{ex}"
+    ensure
+      raise StandardError, ("Couldn't connect to #{@bot_dbhost} as #{@bot_username}") if con.nil?
+      return con
+    end
+  end
+
+
+
   def get_enabled_app_versions_from_database(application_name)
     begin
       con = get_bot_connection()
