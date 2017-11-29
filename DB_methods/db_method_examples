@@ -1,3 +1,5 @@
+    # Connecting to the DB 
+
     def get_bot_connection
     con = nil
     begin
@@ -62,3 +64,9 @@
         results = rs.fetch_hash
         received_value = results.nil? ? nil : results[property]
       end
+
+    ensure
+      con.close if con
+    end
+    return received_value
+  end
