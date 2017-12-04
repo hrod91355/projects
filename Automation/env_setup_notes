@@ -1,7 +1,10 @@
 
-Location for chromedriver: https://sites.google.com/a/chromium.org/chromedriver/downloads
+Chromedriver: Location for chromedriver: https://sites.google.com/a/chromium.org/chromedriver/downloads
+Homebrew: https://brew.sh/
+ruby: rvm reinstall ruby-2.2.0
 
 
 gemlist
 
-selenium-webdriver -v 2.53.4
+selenium-webdriver 
+cucumber
