@@ -1,0 +1,7 @@
+
+Location for chromedriver: https://sites.google.com/a/chromium.org/chromedriver/downloads
+
+
+gemlist
+
+selenium-webdriver -v 2.53.4
