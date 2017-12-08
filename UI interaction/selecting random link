@@ -1,0 +1,73 @@
+Interacting with UI
+
+def create_array_of_app_titles_showing_in_customizer
+  @apps = $b.lis(:xpath => "//div[@id='applicationSectionWrap']//li[@style='display: block;']")
+end
+
+When(/^I click on any random app$/) do
+  create_array_of_app_titles_showing_in_customizer
+  @apps_showing = @apps.collect &:text
+  array_length = @apps_showing.length
+  if array_length > 0
+    max = array_length - 1
+  end
+
+  @application_name = @apps_showing[Random.new.rand(0..max)]
+  @app_id = find_application_id(@application_name)
+
+  selected_app = $b.li(:title => "#{@application_name}")
+  selected_app.click
+  selected_app_summary_validation(@application_name)
+end
+
+
+When(/^I select a random pagination in the app nav on the applications page$/) do
+  @pages_not_selected = $b.as(:xpath => "//a[@list='#applicationsList']")
+  num = Random.new.rand(0..@pages_not_selected.length)
+  @updated_selected_page = @pages_not_selected[num].text
+  if @updated_selected_page.include? 'Next'
+    @updated_selected_page = '2'
+  end
+  @pages_not_selected[num].click
+  selected_page_number = $b.span(:class => 'selectedPage').text
+  expect(selected_page_number).to include @updated_selected_page
+end
+
+  def get_enabled_app_versions_from_database(application_name)
+    begin
+      con = get_bot_connection()
+      in_transaction(con) do
+        rs = con.query("SELECT version FROM ApplicationVersion WHERE application_id = (SELECT Application.ID FROM Application WHERE title = '#{application_name}') AND enabled = 1;")
+        number = rs.num_rows
+        app_versions =[]
+        number.times do
+          app_versions << rs.fetch_row.join(",")
+        end
+        return app_versions
+      end
+    ensure
+      con.close if con
+    end
+  end
+
+When(/^select a version from the app version drop down$/) do
+  #Validate versions in drop down showing in console match database
+  versions_in_database = $m.get_enabled_app_versions_from_database(@application_name)
+  ver = $b.select_lists(:xpath => "//select[@id='applicationVersionSelect_#{@app_id}']//option")
+  values = ver.collect { |option| option.text }
+  available_ver = values.map { |ver| ver.gsub('v', '') }
+  expect(versions_in_database).to match_array available_ver
+
+  #Select a version from the drop down
+  drop_down = $b.select(:id => "applicationVersionSelect_#{@app_id}")
+  num = Random.new.rand(0..values.length - 1)
+  ver_selection = values[num]
+  selected_ver_text = available_ver[num]
+  drop_down.select ver_selection
+
+  wait_for_ajax
+
+  #Validate correct version number is showing in the summary section
+  showing_app_name = find_summary_section_div('application').text
+  expect(showing_app_name).to include selected_ver_text
+end
