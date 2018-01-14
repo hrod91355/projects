@@ -1,0 +1,15 @@
+default:
+  extensions:
+    Behat\MinkExtension:
+#      goutte: ~
+      selenium2:
+        wd_host: 'http://192.168.0.109:4444/wd/hub'
+      base_url: http://way2automation.com
+      browser_name: chrome
+
+
+  suites:
+    default:
+      contexts:
+        - Behat\MinkExtension\Context\MinkContext
+        - FeatureContext
