@@ -4,7 +4,7 @@ default:
 #      goutte: ~
       selenium2:
         wd_host: 'http://192.168.0.109:4444/wd/hub'
-      base_url: http://way2automation.com
+      base_url: https://www.edmunds.com
       browser_name: chrome
 
 
