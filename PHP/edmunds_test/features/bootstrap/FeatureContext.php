@@ -4,6 +4,8 @@ use Behat\Behat\Context\Context;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 use Behat\MinkExtension\Context\MinkContext;
+use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
+use Page\homepage;
 
 
 /**
@@ -19,8 +21,9 @@ class FeatureContext extends MinkContext implements Context
      * You can also pass arbitrary arguments to the
      * context constructor through behat.yml.
      */
-    public function __construct()
+    public function __construct(Homepage $homepage)
     {
+        $this->homepage = $homepage;
     }
 
 
@@ -30,6 +33,47 @@ class FeatureContext extends MinkContext implements Context
     public function waitForThePageToBeLoaded()
     {
         $this->getSession()->wait(10000, "document.readyState === 'complete'");
+    }
+
+    /**
+     * @When I click on Go button
+     */
+    public function iClickOnGoButton()
+    {
+        $this->homepage->findLink("Go")->click();
+    }
+
+
+    /**
+     * @When I select a random make
+     */
+    public function iSelectARandomMake()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I select a random model
+     */
+    public function iSelectARandomModel()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I select a random year
+     */
+    public function iSelectARandomYear()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then I should see the correct vehicle
+     */
+    public function iShouldSeeTheCorrectVehicle()
+    {
+        throw new PendingException();
     }
 
 

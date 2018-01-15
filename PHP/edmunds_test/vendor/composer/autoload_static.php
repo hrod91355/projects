@@ -14,6 +14,11 @@ class ComposerStaticInit40192cef7b87841ccb921c381d104d50
     );
 
     public static $prefixLengthsPsr4 = array (
+        'Z' => 
+        array (
+            'Zend\\EventManager\\' => 18,
+            'Zend\\Code\\' => 10,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -33,6 +38,7 @@ class ComposerStaticInit40192cef7b87841ccb921c381d104d50
         array (
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+            'PackageVersions\\' => 16,
         ),
         'I' => 
         array (
@@ -53,6 +59,14 @@ class ComposerStaticInit40192cef7b87841ccb921c381d104d50
     );
 
     public static $prefixDirsPsr4 = array (
+        'Zend\\EventManager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-eventmanager/src',
+        ),
+        'Zend\\Code\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-code/src',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -109,6 +123,10 @@ class ComposerStaticInit40192cef7b87841ccb921c381d104d50
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
+        'PackageVersions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ocramius/package-versions/src/PackageVersions',
+        ),
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
@@ -147,6 +165,20 @@ class ComposerStaticInit40192cef7b87841ccb921c381d104d50
             'WebDriver' => 
             array (
                 0 => __DIR__ . '/..' . '/instaclick/php-webdriver/lib',
+            ),
+        ),
+        'S' => 
+        array (
+            'SensioLabs\\Behat\\PageObjectExtension\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/sensiolabs/behat-page-object-extension/src',
+            ),
+        ),
+        'P' => 
+        array (
+            'ProxyManager\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src',
             ),
         ),
         'B' => 

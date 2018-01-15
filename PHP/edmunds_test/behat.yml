@@ -6,10 +6,11 @@ default:
         wd_host: 'http://192.168.0.109:4444/wd/hub'
       base_url: https://www.edmunds.com
       browser_name: chrome
+    SensioLabs\Behat\PageObjectExtension: ~
 
 
 #  suites:
 #    default:
 #      contexts:
-#        - Behat\MinkExtension\Context\MinkContext
 #        - FeatureContext
+#         - Behat\MinkExtension\Context\MinkContext
