@@ -8,8 +8,8 @@ default:
       browser_name: chrome
 
 
-  suites:
-    default:
-      contexts:
-        - Behat\MinkExtension\Context\MinkContext
-        - FeatureContext
+#  suites:
+#    default:
+#      contexts:
+#        - Behat\MinkExtension\Context\MinkContext
+#        - FeatureContext

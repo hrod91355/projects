@@ -3,15 +3,14 @@
 use Behat\Behat\Context\Context;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
-use Behat\Behat\Context\SnippetAcceptingContext;
+use Behat\MinkExtension\Context\MinkContext;
 
 
 /**
  * Defines application features from the specific context.
  */
-class FeatureContext implements Context, SnippetAcceptingContext
+class FeatureContext extends MinkContext implements Context
 {
-    private $mink;
 
     /**
      * Initializes context.
@@ -24,26 +23,14 @@ class FeatureContext implements Context, SnippetAcceptingContext
     {
     }
 
-    /**
-     * @When I wait for :text to appear
-     * @Then I should see :text appear
-     * @param $text
-     * @throws \Exception
-     */
-    public function iWaitForTextToAppear($text)
-    {
-        $this->spin(function(FeatureContext $context) use ($text) {
-            try {
-                $context->assertPageContainsText($text);
-                return true;
-            }
-            catch(ResponseTextException $e) {
-                // NOOP
-            }
-            return false;
-        });
-    }
 
+    /**
+     * @When /^wait for the page to be loaded$/
+     */
+    public function waitForThePageToBeLoaded()
+    {
+        $this->getSession()->wait(10000, "document.readyState === 'complete'");
+    }
 
 
 }
