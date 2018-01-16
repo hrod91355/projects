@@ -3,7 +3,7 @@ Feature: Vehicle selector on homepage
   As a potential car buyer
   I need to search for a car using the vehicle selector on the homepage
 
-  @wip
+
   Scenario: I select a specific car using a hardcoded car and predefined steps provided by behat
     Given I am on "/"
     When I select "Acura" from "select-make"
@@ -16,7 +16,7 @@ Feature: Vehicle selector on homepage
     Then I should see " Acura ILX "
 
 
-
+  @wip
   Scenario: I select a random vehicle, make, model
     Given I am on "/"
     When I select a random make

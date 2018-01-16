@@ -49,7 +49,15 @@ class FeatureContext extends MinkContext implements Context
      */
     public function iSelectARandomMake()
     {
-        throw new PendingException();
+        $select = $this->getSession()->getPage()->find('css', '#home_page_mmy_make_select');
+        $options = $select->findAll('css', '.bg-white medium text-capitalize');
+//        $secondOption = $options[1];
+//        $this->$select[1]->click();
+
+//        echo count($options);
+        echo gettype($options);
+
+
     }
 
     /**

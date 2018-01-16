@@ -9,6 +9,7 @@
 namespace Page;
 
 use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
+use Behat\MinkExtension\Context\MinkContext;
 
 class homepage extends Page
 {
@@ -25,7 +26,10 @@ class homepage extends Page
 
     public function iSelectRandomMake()
     {
-        
+        $select = $this->getSession()->getPage()->find('id', 'home_page_mmy_make_select');
+        $options = $select->findAll('css', 'option');
+        $secondOption = $options[1];
+
     }
 
 
