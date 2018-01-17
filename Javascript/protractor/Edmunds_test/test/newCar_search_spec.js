@@ -8,10 +8,12 @@ describe('test new vehicle search functionality', function() {
 
     var HomePage = require('../page/home_page.js');
 
-    it('should be able to search for a new vehicle using the new vehicle search', function() {
+    it('I should be able to search for a new vehicle using the new vehicle search', function() {
         HomePage.selectRandomMake();
         HomePage.selectRandomModel();
-        // HomePage.selectPubState();
+        HomePage.selectNewUsedYear();
+        HomePage.goButton.click();
+
     });
 
 });
