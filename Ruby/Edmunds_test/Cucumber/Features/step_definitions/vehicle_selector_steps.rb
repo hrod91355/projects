@@ -1,7 +1,12 @@
 
 
+extend PageObject
+
+
 Given("I'm on the homepage") do
-  pending # Write code here that turns the phrase above into concrete actions
+  # $b.get "https://www.edmunds.com/"
+  # $b.find_element(:name, "select-make").click
+  visit Homepage
 end
 
 When("I select a make") do
@@ -23,3 +28,4 @@ end
 Then("the page of the selected car loads") do
   pending # Write code here that turns the phrase above into concrete actions
 end
+

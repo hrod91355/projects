@@ -1,0 +1,6 @@
+gem 'cucumber'
+gem 'rspec'
+gem 'page-object'
+gem 'selenium-webdriver'
+gem 'httparty'
+gem 'require_all'
