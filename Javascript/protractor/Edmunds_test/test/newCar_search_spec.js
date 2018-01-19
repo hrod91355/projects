@@ -13,7 +13,7 @@ describe('test new vehicle search functionality', function() {
         HomePage.selectRandomModel();
         HomePage.selectNewUsedYear();
         HomePage.goButton.click();
-
+        // expect(page.getTitle()).toBe("make of car");
     });
 
 });
