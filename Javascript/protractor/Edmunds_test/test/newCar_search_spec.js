@@ -1,4 +1,6 @@
-var util = require('util');
+require("../page/helper.js");
+
+
 
 describe('test new vehicle search functionality', function() {
     beforeEach(function() {
@@ -6,14 +8,21 @@ describe('test new vehicle search functionality', function() {
         browser.get('https://www.edmunds.com/');
     });
 
-    var HomePage = require('../page/home_page.js');
+    var homePage = require('../page/home_page.js');
+    var helper = require("../page/helper.js");
+
 
     it('I should be able to search for a new vehicle using the new vehicle search', function() {
-        HomePage.selectRandomMake();
-        HomePage.selectRandomModel();
-        HomePage.selectNewUsedYear();
-        HomePage.goButton.click();
-        // expect(page.getTitle()).toBe("make of car");
+        homePage.selectRandomMake();
+        homePage.selectRandomModel();
+        homePage.selectNewUsedYear();
+        homePage.goButton.click();
+        globalDropDownSelection = browser.globalDropDownSelection;
+        console.log("this is the selected make " + globalDropDownSelection);
+        helper.titleValidation(globalDropDownSelection);
     });
 
 });
+
+
+
