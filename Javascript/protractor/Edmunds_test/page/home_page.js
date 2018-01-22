@@ -1,6 +1,3 @@
-var DropDownSelection = '';
-var globalDropDownSelection = '';
-
 var homePage = function() {
 
     //List of elements on the page
@@ -11,44 +8,39 @@ var homePage = function() {
     this.modelDropdownList = element(by.xpath('//div//select[@name="select-model"]')).all(by.tagName('option'));
     this.newUsedYearDropdownList = element(by.xpath('//div[3]//select')).all(by.tagName('option'));
     this.goButton = element(by.xpath('//a[contains(.,"Go")]'));
+    this.navNewCarLink = element(by.id('nav_new_future_makes'));
+    // this.newCarList = element()
 
     var helper = require("../page/helper.js");
 
     this.selectRandomMake = function() {
         var allOptions = this.makeDropdownList;
+        helper.selectOptions(allOptions);
+    };
+
+    this.selectRandomModel = function() {
+        var allOptions = this.modelDropdownList;
+        helper.selectOptions(allOptions);
+    };
+
+    this.selectNewUsedYear = function() {
+        element(by.xpath('//div[3]//select//option[2]')).click();
+        browser.sleep(1000);
+    };
+
+    this.selectRandomNewCar = function() {
+        this.navNewCarLink.click();
+
+
+        element.all(by.xpath("//div[@class='anchor-columns list small text-white']//a")).get(3).click();
+        browser.sleep(2000);
+        element.all(by.xpath("//div[@class='anchor-columns list small text-white']//a")).get(3).click();
+        browser.sleep(2000);
+        element.all(by.xpath("//div[@class='anchor-columns list small text-white']//a")).get(1).click();
+        // browser.sleep(20000);
         // helper.selectOptions(allOptions);
-
-        allOptions.count().then(function(numberOfItems) {
-            return Math.floor(Math.random() * numberOfItems);
-        }).then(function(randomNumber) {
-            allOptions.get(randomNumber).getText().then(function(text) {
-                DropDownSelection = text;
-                globalDropDownSelection = DropDownSelection;
-                console.log("this is the selected model " + globalDropDownSelection);
-            });
-
-            allOptions.get(randomNumber).click();
-            browser.sleep(1000);
-        });
-
-        this.selectRandomModel = function() {
-            // console.log(globalDropDownSelection);
-            var allOptions = this.modelDropdownList;
-            helper.selectOptions(allOptions);
-        };
-
-        this.selectNewUsedYear = function() {
-            element(by.xpath('//div[3]//select//option[2]')).click();
-            browser.sleep(1000);
-
-        };
-
     };
 
-    this.titleValidation = function(globalDropDownSelection) {
-        console.log(globalDropDownSelection);
-        expect(browser.getTitle()).toContain(globalDropDownSelection);
-    };
 };
 
 module.exports = new homePage();

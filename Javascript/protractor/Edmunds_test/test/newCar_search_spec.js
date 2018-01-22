@@ -15,10 +15,11 @@ describe('test new vehicle search functionality', function() {
         homePage.selectRandomModel();
         homePage.selectNewUsedYear();
         homePage.goButton.click();
-        // globalDropDownSelection = globalDropDownSelection;
-        // console.log("this is the selected make " + globalDropDownSelection);
-        // helper.titleValidation(globalDropDownSelection);
     });
+
+    it('I should be able to select a make from the New Car nav menu', function() {
+        homePage.selectRandomNewCar();
+    })
 
 });
 
