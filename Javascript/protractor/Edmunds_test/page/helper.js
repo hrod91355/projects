@@ -13,9 +13,6 @@ module.exports = {
         });
     },
 
-
-
-
     titleValidation: function(globalDropDownSelection ) {
         expect(browser.getTitle()).toContain(globalDropDownSelection );
     }

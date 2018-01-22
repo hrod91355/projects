@@ -1,7 +1,5 @@
 require("../page/helper.js");
 
-
-
 describe('test new vehicle search functionality', function() {
     beforeEach(function() {
         browser.waitForAngularEnabled(false);
@@ -17,9 +15,9 @@ describe('test new vehicle search functionality', function() {
         homePage.selectRandomModel();
         homePage.selectNewUsedYear();
         homePage.goButton.click();
-        globalDropDownSelection = browser.globalDropDownSelection;
-        console.log("this is the selected make " + globalDropDownSelection);
-        helper.titleValidation(globalDropDownSelection);
+        // globalDropDownSelection = globalDropDownSelection;
+        // console.log("this is the selected make " + globalDropDownSelection);
+        // helper.titleValidation(globalDropDownSelection);
     });
 
 });

@@ -6,6 +6,9 @@ exports.config = {
         'browserName': 'chrome'
     },
 
+    onPrepare: function() {
+    },
+
     // Framework to use. Jasmine is recommended.
     framework: 'jasmine',
 
