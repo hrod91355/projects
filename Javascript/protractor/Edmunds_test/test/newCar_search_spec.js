@@ -10,15 +10,17 @@ describe('test new vehicle search functionality', function() {
     var helper = require("../page/helper.js");
 
 
-    it('I should be able to search for a new vehicle using the new vehicle search', function() {
-        homePage.selectRandomMake();
-        homePage.selectRandomModel();
-        homePage.selectNewUsedYear();
-        homePage.goButton.click();
-    });
+    // it('I should be able to search for a new vehicle using the new vehicle search', function() {
+    //     homePage.selectRandomMake();
+    //     homePage.selectRandomModel();
+    //     homePage.selectNewUsedYear();
+    //     homePage.goButton.click();
+    // });
 
     it('I should be able to select a make from the New Car nav menu', function() {
-        homePage.selectRandomNewCar();
+        homePage.navMenuSelectRandomNewCar();
+        // homePage.navMenuSelectRandomMake();
+        // homePage.navMenuSelectRandomYear();
     })
 
 });
