@@ -1,9 +1,8 @@
 module.exports = {
 
-    selectOptions: function(allOptions) {
-
+    selectLot: function(allOptions) {
         allOptions.count().then(function(numberOfItems) {
-            return Math.floor(Math.random() * numberOfItems) + 1;
+            return Math.floor(Math.random() * numberOfItems);
         }).then(function(randomNumber) {
             allOptions.get(randomNumber).getText().then(function(text) {
                 globalDropDownSelection = text;
@@ -13,13 +12,5 @@ module.exports = {
             browser.sleep(1000);
         });
     },
-
-    selectFromList: function() {
-
-    },
-
-    titleValidation: function(globalDropDownSelection) {
-        expect(browser.getTitle()).toContain(globalDropDownSelection);
-    }
 
 };
