@@ -1,7 +1,6 @@
 var homePage = function() {
 
     //List of elements on the page
-
     this.makeDropdown = element(by.name('select-make'));
     this.makeDropdownList = element(by.name('select-make')).all(by.tagName('option'));
     this.modelDropdown = element(by.xpath('//div//select[@name="select-model"]'));
@@ -9,7 +8,7 @@ var homePage = function() {
     this.newUsedYearDropdownList = element(by.xpath('//div[3]//select')).all(by.tagName('option'));
     this.goButton = element(by.xpath('//a[contains(.,"Go")]'));
     this.navNewCarLink = element(by.id('nav_new_future_makes'));
-    // this.newCarList = element()
+
 
     var helper = require("../page/helper.js");
 
@@ -28,17 +27,55 @@ var homePage = function() {
         browser.sleep(1000);
     };
 
-    this.selectRandomNewCar = function() {
+    this.navMenuSelectRandomNewCar = function() {
+
         this.navNewCarLink.click();
+        // browser.sleep(1000);
+        // element.all(by.xpath("//a[@data-tracking-id='nav_mmy_select_make']")).get(5).click();
+        var allOptions = element.all(by.xpath("//a[@data-tracking-id='nav_mmy_select_make']"));
 
+        // allOptions.map(function(items){
+        //     return items.getText();
+        // });
 
-        element.all(by.xpath("//div[@class='anchor-columns list small text-white']//a")).get(3).click();
+        // console.log(allOptions);
+
+        // allOptions.then(function(items) {
+        //     console.log(items.length)
+
+        // });
+
+        // allOptions.count().then(function(numberOfItems) {
+        //     console.log(numberOfItems);
+        //     return Math.floor(Math.random() * numberOfItems);
+        // }).then(function(randomNumber) {
+        //     console.log(randomNumber);
+        //     browser.sleep(1000);
+        //     allOptions.get(randomNumber).click();
+
+        // })
+
+    };
+
+    this.navMenuSelectRandomMake = function() {
+        element.all(by.xpath("//a[@data-tracking-id='nav_mmy_model_select']")).get(2).click();
         browser.sleep(2000);
-        element.all(by.xpath("//div[@class='anchor-columns list small text-white']//a")).get(3).click();
-        browser.sleep(2000);
-        element.all(by.xpath("//div[@class='anchor-columns list small text-white']//a")).get(1).click();
-        // browser.sleep(20000);
-        // helper.selectOptions(allOptions);
+    };
+
+    this.navMenuSelectRandomYear = function() {
+        element.all(by.xpath("//a[@data-tracking-id='nav_mmy_year_select']")).get(1).click();
+
+        // var allOptions = element.all(by.xpath("//a[@data-tracking-id='nav_mmy_year_select']"));
+
+        // allOptions.count().then(function(numberOfItems) {
+        //     return Math.floor(Math.random() * numberOfItems);
+        // }).then(function(randomNumber) {
+        //     allOptions.get(randomNumber).getText().then(function(text) {
+        //         console.log(text);
+        //     });
+        //     allOptions.get(randomNumber).click();
+
+        // })
     };
 
 };
