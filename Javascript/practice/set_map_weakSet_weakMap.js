@@ -21,9 +21,15 @@
 
 // map
 
-let myMap = new Map([['a1', 'Hello'], ['b2', 'goodbye']]);
-myMap.set('c3', 'food');
-myMap.delete('a1');
+// let myMap = new Map([['a1', 'Hello'], ['b2', 'goodbye']]);
+// myMap.set('c3', 'food');
+// myMap.delete('a1');
 
 
-console.log(myMap.size);
+// console.log(myMap.size);
+
+//
+
+// weak set
+
+
