@@ -28,33 +28,9 @@ var homePage = function() {
     };
 
     this.navMenuSelectRandomNewCar = function() {
-
         this.navNewCarLink.click();
-        // browser.sleep(1000);
-        // element.all(by.xpath("//a[@data-tracking-id='nav_mmy_select_make']")).get(5).click();
-        var allOptions = element.all(by.xpath("//a[@data-tracking-id='nav_mmy_select_make']"));
-
-        // allOptions.map(function(items){
-        //     return items.getText();
-        // });
-
-        // console.log(allOptions);
-
-        // allOptions.then(function(items) {
-        //     console.log(items.length)
-
-        // });
-
-        // allOptions.count().then(function(numberOfItems) {
-        //     console.log(numberOfItems);
-        //     return Math.floor(Math.random() * numberOfItems);
-        // }).then(function(randomNumber) {
-        //     console.log(randomNumber);
-        //     browser.sleep(1000);
-        //     allOptions.get(randomNumber).click();
-
-        // })
-
+        element.all(by.xpath("//a[@data-tracking-id='nav_mmy_select_make']")).get(5).click();
+        browser.sleep(2000);
     };
 
     this.navMenuSelectRandomMake = function() {
@@ -64,18 +40,6 @@ var homePage = function() {
 
     this.navMenuSelectRandomYear = function() {
         element.all(by.xpath("//a[@data-tracking-id='nav_mmy_year_select']")).get(1).click();
-
-        // var allOptions = element.all(by.xpath("//a[@data-tracking-id='nav_mmy_year_select']"));
-
-        // allOptions.count().then(function(numberOfItems) {
-        //     return Math.floor(Math.random() * numberOfItems);
-        // }).then(function(randomNumber) {
-        //     allOptions.get(randomNumber).getText().then(function(text) {
-        //         console.log(text);
-        //     });
-        //     allOptions.get(randomNumber).click();
-
-        // })
     };
 
 };
