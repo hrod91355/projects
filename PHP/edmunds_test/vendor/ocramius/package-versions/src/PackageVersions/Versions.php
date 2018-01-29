@@ -44,7 +44,7 @@ final class Versions
   'symfony/yaml' => 'v4.0.3@b84f646b9490d2101e2c25ddeec77ceefbda2eee',
   'zendframework/zend-code' => '3.3.0@6b1059db5b368db769e4392c6cb6cc139e56640d',
   'zendframework/zend-eventmanager' => '3.2.0@9d72db10ceb6e42fb92350c0cb54460da61bd79c',
-  '__root__' => 'dev-master@5014e7ea07692a44b8c12e7b96279b6fc9045c19',
+  '__root__' => 'dev-php@74afc661867e97b68e50383f89a645dda5ef94b7',
 );
 
     private function __construct()
