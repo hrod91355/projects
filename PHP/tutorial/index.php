@@ -1,7 +1,6 @@
 <?php
   include 'includes/dbh.inc.php';
-  include 'includes/user.inc.php';
-  include 'includes/viewuser.inc.php';
+  include 'includes/user_pdo.inc.php';
 
 ?>
 
@@ -14,9 +13,8 @@
 
 <?php
 
-    $users = new User();
-    $users->getAllUsers();
-
+$object = new User;
+echo $object->getAllUsers();
 
 ?>
 
