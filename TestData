@@ -1,7 +1,7 @@
-MySql through Homebrew
+MySql install through Homebrew
 https://gist.github.com/nrollr/3f57fc15ded7dddddcc4e82fe137b58e
 
-Sequel Pro
+Tool: Sequel Pro
 http://www.sequelpro.com/
 
 CREATE DATABASE users;
