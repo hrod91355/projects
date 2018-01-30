@@ -1,5 +1,5 @@
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `city`, `age`)
 VALUES
   (1, 'Joe', 'Smith', 'San Jose', 32),
-  (2, 'John', 'Rameriez', 'CO Springs', 23),
+  (2, 'John', 'Ramariez', 'CO Springs', 23),
   (3, 'Sarah', 'Jones', 'Denver', 35);
