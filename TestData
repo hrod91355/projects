@@ -12,12 +12,16 @@ CREATE TABLE users (
 	last_name VARCHAR(30) NOT NULL,
 	city VARCHAR(30) NOT NULL,
 	age INT NOT NULL,
+	user_email VARCHAR(30) NOT NULL,
+	user_uid INT NOT NULL,
+	user_pwd VARCHAR(30) NOT NULL;
 	PRIMARY KEY (id),
 	UNIQUE (last_name)
 );
 
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `city`, `age`)
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `city`, `age`, `user_email`, `user_uid`, `user_pwd`)
 VALUES
-  (1, 'Joe', 'Smith', 'San Jose', 32),
-  (2, 'John', 'Ramariez', 'CO Springs', 23),
-  (3, 'Sarah', 'Jones', 'Denver', 35);
+	(1, 'Joe', 'Smith', 'San Jose', 32, 'joeSmith@email.com', '100', '12345'),
+	(2, 'John', 'Rameriez', 'CO Springs', 23, 'johnRameriez@email.com', '101', '54321'),
+	(3, 'Sarah', 'Jones', 'Denver', 35, 'sarahJones@email.com', '102', '32145');
+
