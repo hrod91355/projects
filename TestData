@@ -19,9 +19,10 @@ CREATE TABLE users (
 	UNIQUE (last_name)
 );
 
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `city`, `age`, `user_email`, `user_uid`, `user_pwd`)
+INSERT INTO `users` (`first_name`, `last_name`, `city`, `age`, `user_email`, `user_uid`, `user_pwd`)
 VALUES
-	(1, 'Joe', 'Smith', 'San Jose', 32, 'joeSmith@email.com', '100', '12345'),
-	(2, 'John', 'Rameriez', 'CO Springs', 23, 'johnRameriez@email.com', '101', '54321'),
-	(3, 'Sarah', 'Jones', 'Denver', 35, 'sarahJones@email.com', '102', '32145');
+	('Joe', 'Smith', 'San Jose', 32, 'joeSmith@email.com', '100', '12345'),
+	('John', 'Rameriez', 'CO Springs', 23, 'johnRameriez@email.com', '101', '54321'),
+	('Sarah', 'Jones', 'Denver', 35, 'sarahJones@email.com', '102', '32145');
+
 
