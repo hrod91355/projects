@@ -11,5 +11,10 @@ $dbUserName = "root";
 $dbPassword = "potatoes";
 $dbName = "phplessons";
 
+//connection to db
 $conn = mysqli_connect($dbServerName, $dbUserName, $dbPassword, $dbName);
+//error messaging if connection fails
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 

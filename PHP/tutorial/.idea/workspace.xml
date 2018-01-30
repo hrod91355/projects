@@ -11,35 +11,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dbh.index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbh.index.php">
+      <file leaf-file-name="array.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php_tutorial/array.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBH_dataVerification.include.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBH_dataVerification.include.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
-                <marker date="1517343468059" expanded="true" signature="135:154" ph="SELECT * FRO... users" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="insertData.index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/insertData.index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <marker date="1517343586616" expanded="true" signature="225:388" ph="INSERT INTO `users`... " />
+                <marker date="1517354515836" expanded="true" signature="262:281" ph="SELECT * FRO... users" />
               </folding>
             </state>
           </provider>
@@ -48,8 +36,8 @@
       <file leaf-file-name="dbConnect.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/dbConnect.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,13 +55,17 @@
         <option value="$PROJECT_DIR$/php_tutorial/whileLoop.php" />
         <option value="$PROJECT_DIR$/php_tutorial/for_loop.php" />
         <option value="$PROJECT_DIR$/php_tutorial/forEach.php" />
-        <option value="$PROJECT_DIR$/php_tutorial/array.php" />
         <option value="$PROJECT_DIR$/php_tutorial/function.php" />
         <option value="$PROJECT_DIR$/php_tutorial/superGlobals.php" />
         <option value="$PROJECT_DIR$/includes/dbConnect.includes.php" />
-        <option value="$PROJECT_DIR$/includes/dbConnect.inc.php" />
         <option value="$PROJECT_DIR$/include.php" />
+        <option value="$PROJECT_DIR$/DBH_dataVerification.include.php" />
+        <option value="$PROJECT_DIR$/insertData.index.php" />
+        <option value="$PROJECT_DIR$/includes/signup.inc.php" />
+        <option value="$PROJECT_DIR$/preparedSTMT_dbquery.php" />
+        <option value="$PROJECT_DIR$/includes/dbConnect.inc.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/php_tutorial/array.php" />
       </list>
     </option>
   </component>
@@ -85,8 +77,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="668" />
-    <option name="y" value="367" />
+    <option name="x" value="405" />
+    <option name="y" value="204" />
     <option name="width" value="1391" />
     <option name="height" value="1104" />
   </component>
@@ -112,6 +104,16 @@
             <path>
               <item name="tutorial" type="b2602c69:ProjectViewProjectNode" />
               <item name="tutorial" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tutorial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tutorial" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tutorial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tutorial" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php_tutorial" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -161,15 +163,15 @@
       <option name="presentableId" value="Default" />
       <updated>1517239997828</updated>
       <workItem from="1517239999065" duration="5181000" />
-      <workItem from="1517334452969" duration="5678000" />
+      <workItem from="1517334452969" duration="10246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10859000" />
+    <option name="totallyTimeSpent" value="15427000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="668" y="367" width="1391" height="1104" extended-state="0" />
+    <frame x="405" y="204" width="1391" height="1104" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14737599" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -297,14 +299,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php_tutorial/array.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php_tutorial/forEach.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -313,20 +307,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/dbConnect.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBH_dataVerification.include.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <marker date="1517343468059" expanded="true" signature="135:154" ph="SELECT * FRO... users" />
+            <marker date="1517345441979" expanded="true" signature="135:154" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -339,13 +325,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/insertData.index.php">
+    <entry file="file://$PROJECT_DIR$/preparedSTMT_insertData.index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="585">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
-            <marker date="1517343586616" expanded="true" signature="225:388" ph="INSERT INTO `users`... " />
+            <marker date="1517348325510" expanded="true" signature="353:464" ph="INSERT INTO `users`... " />
+            <marker date="1517348325510" expanded="true" signature="353:467" ph="INSERT INTO `users`... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preparedSTMT_dbquery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="7" />
+          <folding>
+            <marker date="1517352999303" expanded="true" signature="258:294" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/signup.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/dbConnect.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <marker date="1517354515836" expanded="true" signature="262:281" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_tutorial/array.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
