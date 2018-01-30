@@ -5,6 +5,7 @@ Slowly building up a portfolio of automation scripts done on my spare time in or
 * Enviornment Setup: 
   * MySql DB
   * MAMP Web Server
+  * Github
   
 * PHP:
   * PHP Storm
