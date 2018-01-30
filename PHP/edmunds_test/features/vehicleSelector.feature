@@ -13,10 +13,10 @@ Feature: Vehicle selector on homepage
     And I select "2017" from "select-year"
     And wait for the page to be loaded
     And I click on Go button
-    Then I should see " Acura ILX "
+    Then I should see "Acura ILX"
 
 
-  @wip
+  @todo
   Scenario: I select a random vehicle, make, model
     Given I am on "/"
     When I select a random make

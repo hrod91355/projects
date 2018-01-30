@@ -12,13 +12,11 @@ use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
 use SensioLabs\Behat\PageObjectExtension\Context\PageObjectContext;
 use Behat\MinkExtension\Context\MinkContext;
 
+
 class homepage extends Page
 {
     protected $elements = array(
         'Go button' => '.btn-success'
-
-
-
     );
 
     public function iSelectGoButton()
@@ -29,18 +27,19 @@ class homepage extends Page
 
     public function iSelectRandomMake()
     {
-        $select = $this->getPage()->find('id', 'home_page_mmy_make_select');
-        $options = $select->findAll('xpath', '//div//select[@name="select-make"]//option')
-        $secondOption = $options[1];
-
-        $select = $this->getSession()->getPage()->find('css', '#home_page_mmy_make_select');
-        sleep(2);
-       ;
-//        $secondOption = $options[1];
-//        $this->$select[1]->click();
-
-//        echo count($options);
-        echo gettype($options);
+        $select = $this->getSession()->getPage()->find('id', 'home_page_mmy_make_select');
+        $this->$select-click();
+//        $options = $select->findAll('xpath', '//div//select[@name="select-make"]//option')
+////        $secondOption = $options[1];
+//
+//        $select = $this->getSession()->getPage()->find('css', '#home_page_mmy_make_select');
+//        sleep(2);
+//       ;
+////        $secondOption = $options[1];
+////        $this->$select[1]->click();
+//
+////        echo count($options);
+//        echo gettype($options);
 
 
     }

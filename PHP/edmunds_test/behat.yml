@@ -1,4 +1,5 @@
 default:
+
   extensions:
     Behat\MinkExtension:
 #      goutte: ~
@@ -7,7 +8,6 @@ default:
       base_url: https://www.edmunds.com
       browser_name: chrome
     SensioLabs\Behat\PageObjectExtension: ~
-
 
 #  suites:
 #    default:

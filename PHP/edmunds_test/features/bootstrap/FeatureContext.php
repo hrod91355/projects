@@ -8,6 +8,7 @@ use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
 use Page\homepage;
 
 
+
 /**
  * Defines application features from the specific context.
  */
@@ -23,6 +24,7 @@ class FeatureContext extends MinkContext implements Context
      */
     public function __construct(Homepage $homepage)
     {
+
         $this->homepage = $homepage;
     }
 
@@ -49,7 +51,8 @@ class FeatureContext extends MinkContext implements Context
      */
     public function iSelectARandomMake()
     {
-
+        $select = $this->getSession()->getPage()->find('id', 'home_page_mmy_make_select');
+        $this->$select-click();
 
     }
 
