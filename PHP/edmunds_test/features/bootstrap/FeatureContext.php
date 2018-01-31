@@ -15,6 +15,7 @@ use Page\homepage;
 class FeatureContext extends MinkContext implements Context
 {
 
+    private $homepage;
     /**
      * Initializes context.
      *
@@ -37,12 +38,21 @@ class FeatureContext extends MinkContext implements Context
         $this->getSession()->wait(10000, "document.readyState === 'complete'");
     }
 
+
+    /**
+     * @When I select a year\/new
+     */
+    public function iSelectAYearNewUsed()
+    {
+        $this->homepage->selectYearNew();
+    }
+
     /**
      * @When I click on Go button
      */
     public function iClickOnGoButton()
     {
-        $this->homepage->findLink("Go")->click();
+        $this->homepage->iSelectGoButton();
     }
 
 
@@ -53,7 +63,7 @@ class FeatureContext extends MinkContext implements Context
     {
 //        $select = $this->getSession()->getPage()->find('id', 'home_page_mmy_make_select');
 //        $this->$select-click();
-        $this->hompage->find('name', 'select-make')->click();
+        $this->hompage->iSelectRandomMake();
 
     }
 
