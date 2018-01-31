@@ -15,8 +15,6 @@ Feature: Vehicle selector on homepage
     And I click on Go button
     Then I should see "Acura ILX"
 
-
-  @todo
   Scenario: I select a random vehicle, make, model
     Given I am on "/"
     When I select a random make

@@ -51,8 +51,9 @@ class FeatureContext extends MinkContext implements Context
      */
     public function iSelectARandomMake()
     {
-        $select = $this->getSession()->getPage()->find('id', 'home_page_mmy_make_select');
-        $this->$select-click();
+//        $select = $this->getSession()->getPage()->find('id', 'home_page_mmy_make_select');
+//        $this->$select-click();
+        $this->hompage->find('name', 'select-make')->click();
 
     }
 
