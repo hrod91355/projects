@@ -11,20 +11,21 @@ namespace Page;
 use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
 use SensioLabs\Behat\PageObjectExtension\Context\PageObjectContext;
 use Behat\MinkExtension\Context\MinkContext;
+use page\NewCarLandingPage;
 
 
-class homepage extends Page
+class HomePage extends Page
 {
 //    protected $elements = array(
 ////        'Go button' => '.btn-success',
-//        'Select Make DropDown' => array('xpath' => "//select[@name='select-make']"),
+//        $Select_Make_DropDown => array('xpath' => "//select[@name='select-make']"),
+//        'selectModelDropDown' => array('xpath' => '//div//select[@name="select-model"]'),
 //        'Select_year' => array('xpath' => '//div[3]//select')
 //    );
 
     public function iSelectGoButton()
     {
         $this->findLink("Go")->click();
-
     }
 
     public function selectYearNew()
@@ -38,22 +39,38 @@ class homepage extends Page
         } else {
             $maxCount = count($buttonNameArr) - 1;
             $selectedNum = rand(1, $maxCount);
-            echo $selectedNum;
             $avaiableButtonText = $buttonNameArr[$selectedNum]->getText();
-            echo $avaiableButtonText;
             $this->find('xpath', "//div[3]//select//option[{$selectedNum}]")->click();
         }
     }
 
-    public function iSelectRandomMake()
+    public function randomMakeSelection()
     {
-        $buttonNameArr = $this->findAll('xpath', '//div[3]//select//option');
-        $maxCount = count($buttonNameArr);
+        $selectMakeDropDown = $this->find('xpath', '//div//select[@name="select-make"]');
+        $selectMakeDropDown->click();
+
+        $availableMakesArr = $this->findAll('xpath', '//div//select[@name="select-make"]//option');
+        $maxCount = count($availableMakesArr);
         $selectedNum = rand(2, $maxCount);
-        echo $selectedNum;
-        $avaiableButtonText = $buttonNameArr[$selectedNum]->getText();
-        echo $avaiableButtonText;
+        $selectedMake = $availableMakesArr[$selectedNum - 1]->getText();
+        $GLOBALS[selectedMakeTextForValidation] = $selectedMake;
+        $this->find('xpath', "//div//select[@name='select-make']//option[{$selectedNum}]")->click();
+
     }
+
+    public function randomModelSelection()
+    {
+        $selectModelDropDown = $this->find('xpath', '//div//select[@name="select-model"]');
+        $selectModelDropDown->click();
+
+        $availableModelArr = $this->findAll('xpath', '//div//select[@name="select-model"]//option');
+        $maxCount = count($availableModelArr);
+        $selectedNum = rand(2, $maxCount);
+        $selectedModel = $availableModelArr[$selectedNum - 1]->getText();
+        $this->find('xpath', "//div//select[@name='select-model']//option[{$selectedNum}]")->click();
+    }
+
+
 
 
 }

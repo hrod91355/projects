@@ -6,16 +6,23 @@ use Behat\Gherkin\Node\TableNode;
 use Behat\MinkExtension\Context\MinkContext;
 use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
 use Page\homepage;
+use Page\NewCarLandingPage;
 
 
 
 /**
  * Defines application features from the specific context.
  */
+
+//Global elements for validation
+$selectedMakeTextForValidation='';
+
 class FeatureContext extends MinkContext implements Context
 {
 
     private $homepage;
+    private $newCarLandingPage;
+
     /**
      * Initializes context.
      *
@@ -23,10 +30,11 @@ class FeatureContext extends MinkContext implements Context
      * You can also pass arbitrary arguments to the
      * context constructor through behat.yml.
      */
-    public function __construct(Homepage $homepage)
+    public function __construct(Homepage $homepage, NewCarLandingPage $newCarLandingPage)
     {
 
         $this->homepage = $homepage;
+        $this->newCarLandingPage = $newCarLandingPage;
     }
 
 
@@ -61,10 +69,7 @@ class FeatureContext extends MinkContext implements Context
      */
     public function iSelectARandomMake()
     {
-//        $select = $this->getSession()->getPage()->find('id', 'home_page_mmy_make_select');
-//        $this->$select-click();
-        $this->hompage->iSelectRandomMake();
-
+        $this->homepage->randomMakeSelection();
     }
 
     /**
@@ -72,15 +77,7 @@ class FeatureContext extends MinkContext implements Context
      */
     public function iSelectARandomModel()
     {
-        throw new PendingException();
-    }
-
-    /**
-     * @When I select a random year
-     */
-    public function iSelectARandomYear()
-    {
-        throw new PendingException();
+        $this->homepage->randomModelSelection();
     }
 
     /**
@@ -88,7 +85,7 @@ class FeatureContext extends MinkContext implements Context
      */
     public function iShouldSeeTheCorrectVehicle()
     {
-        throw new PendingException();
+        $this->newCarLandingPage->headerValidation();
     }
 
 

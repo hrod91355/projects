@@ -11,14 +11,15 @@ Feature: Vehicle selector on homepage
     And I select "ILX Sedan" from "select-model"
     And wait for the page to be loaded
     And I select a year/new
-    And wait for the page to be loaded
     And I click on Go button
     Then I should see "Acura ILX"
 
-#  Scenario: I select a random vehicle, make, model
-#    Given I am on "/"
-#    When I select a random make
-#    And I select a random model
-#    And I select a random year
-#    And I click on Go button
-#    Then I should see the correct vehicle
+  Scenario: I select a random vehicle, make, model
+    Given I am on "/"
+    When I select a random make
+    And wait for the page to be loaded
+    And I select a random model
+    And wait for the page to be loaded
+    And I select a year/new
+    And I click on Go button
+    Then I should see the correct vehicle
