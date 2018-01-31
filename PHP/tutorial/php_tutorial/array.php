@@ -17,8 +17,18 @@ array_push($data, "Daniel", 23, 43, "joe");
 array_push($data, 17);
 
 //Associative arrays
-$data = array("first" => "Daniel", "last" => "Jones", "age" => 25);
-print_r($data);
+$dataArr = array(
+    "first" => "Daniel",
+    "last" => "Jones",
+    "age" => 25);
+
+
+$personArr["first"] = "Daniel";
+$personArr["last"] = "Jones";
+$personArr["age"] = 25;
+
+
+print_r($personArr);
 
 
 //Multidimensional arrays

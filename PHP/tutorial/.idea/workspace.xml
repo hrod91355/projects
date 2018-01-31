@@ -14,8 +14,8 @@
       <file leaf-file-name="array.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php_tutorial/array.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            <state relative-caret-position="435">
+              <caret line="34" column="56" lean-forward="true" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -77,10 +77,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="405" />
-    <option name="y" value="204" />
+    <option name="y" value="23" />
     <option name="width" value="1391" />
-    <option name="height" value="1104" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -163,15 +162,15 @@
       <option name="presentableId" value="Default" />
       <updated>1517239997828</updated>
       <workItem from="1517239999065" duration="5181000" />
-      <workItem from="1517334452969" duration="10246000" />
+      <workItem from="1517334452969" duration="10816000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15427000" />
+    <option name="totallyTimeSpent" value="15997000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="405" y="204" width="1391" height="1104" extended-state="0" />
+    <frame x="0" y="23" width="1391" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14737599" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -374,8 +373,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php_tutorial/array.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        <state relative-caret-position="435">
+          <caret line="34" column="56" lean-forward="true" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
           <folding />
         </state>
       </provider>
