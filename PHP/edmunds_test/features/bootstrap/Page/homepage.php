@@ -70,7 +70,27 @@ class HomePage extends Page
         $this->find('xpath', "//div//select[@name='select-model']//option[{$selectedNum}]")->click();
     }
 
+    public function randomMakeTopNav()
+    {
+        $selectNewCarLinkTopNav = $this->findLink('New Cars');
+        $selectNewCarLinkTopNav->click();
 
+        $makesArr = $this->findAll('xpath', "//div[@class='makes']//a");
+        $maxCount = count($makesArr);
+        $selectedNum = rand(2, $maxCount);
+        $selectedMake = $makesArr[$selectedNum]->getText();
+        echo $selectedMake;
+        $GLOBALS[selectedMakeTextForValidation] = $selectedMake;
+        $this->find('xpath', "//div[@class='makes']//a[{$selectedNum}]")->click();
+    }
+
+    public function randomModelTopNav() {
+        $modelArr = $this->findAll('xpath', "//div[@class='models']//a");
+        $maxCount = count($modelArr);
+        $selectedNum = rand(2, $maxCount);
+        $this->find('xpath', "//div[@class='models']//a[{$selectedNum}]")->click();
+
+    }
 
 
 }
