@@ -1,1 +1,13 @@
 
+JSONPlaceholder
+
+Fake Online REST API for Testing and Prototyping 
+powered by JSON Server and lowdb
+
+https://jsonplaceholder.typicode.com/
+
+
+
+Fake Data for JSON server:
+
+https://github.com/marak/Faker.js/
