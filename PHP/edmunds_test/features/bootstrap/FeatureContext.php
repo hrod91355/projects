@@ -89,6 +89,31 @@ class FeatureContext extends MinkContext implements Context
     }
 
 
+    /**
+     * @When I select a random make from the New Car link in the top nav
+     */
+    public function iSelectARandomMakeFromTheNewCarLinkInTheTopNav()
+    {
+        $this->homepage->randomMakeTopNav();
+    }
+
+    /**
+     * @When I select a random model from the top nav
+     */
+    public function iSelectARandomModelFromTheTopNav()
+    {
+        $this->homepage->randomModelTopNav();
+    }
+
+    /**
+     * @When I select a year from the top nav
+     */
+    public function iSelectAYearFromTheTopNav()
+    {
+        throw new PendingException();
+    }
+
+
 }
 
 
