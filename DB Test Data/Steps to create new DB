@@ -7,13 +7,12 @@ http://www.sequelpro.com/
 CREATE DATABASE users;
 
 CREATE TABLE users (
-	id INT NOT NULL,
+	user_uid INT AUTO_INCREMENT PRIMARY KEY not null,
 	first_name VARCHAR(30) NOT NULL,
 	last_name VARCHAR(30) NOT NULL,
 	city VARCHAR(30) NOT NULL,
 	age INT NOT NULL,
 	user_email VARCHAR(30) NOT NULL,
-	user_uid INT AUTO_INCREMENT PRIMARY KEY not null,
 	user_pwd VARCHAR(30) NOT NULL;
 	PRIMARY KEY (id),
 	UNIQUE (last_name)
