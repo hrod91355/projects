@@ -13,7 +13,7 @@ CREATE TABLE users (
 	city VARCHAR(30) NOT NULL,
 	age INT NOT NULL,
 	user_email VARCHAR(30) NOT NULL,
-	user_pwd VARCHAR(30) NOT NULL;
+	user_pwd VARCHAR(30) NOT NULL,
 	PRIMARY KEY (id),
 	UNIQUE (last_name)
 );
