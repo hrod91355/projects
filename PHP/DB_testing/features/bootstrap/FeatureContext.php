@@ -7,11 +7,12 @@ use Behat\MinkExtension\Context\MinkContext;
 use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
 
 include 'Page/DataBaseConnector.php';
+include 'Page/User.php';
 
 /**
  * Defines application features from the specific context.
  */
-class FeatureContext extends DataBaseConnector implements Context
+class FeatureContext extends User implements Context
 {
 
     private $dataBaseConnector;
@@ -25,7 +26,7 @@ class FeatureContext extends DataBaseConnector implements Context
      */
     public function iAmDbaConnectedToTheDb()
     {
-        $this->connect();
+        $this->getUsersLastNames();
     }
 
     /**
@@ -33,7 +34,7 @@ class FeatureContext extends DataBaseConnector implements Context
      */
     public function newUserInfoIsAddedToTheDb()
     {
-        throw new PendingException();
+        $this->getUsersLastNames();
     }
 
     /**

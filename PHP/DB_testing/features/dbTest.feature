@@ -1,6 +1,7 @@
-Feature: DB test
-  In order to interact with DB
-  As a
+Feature: DB data update
+  In order to see data in the DB
+  As a DBA
+  I want to validate I am able to insert, update, or delete data
 
 
   Scenario: Inserting data into the user db
