@@ -13,13 +13,13 @@ class User extends DataBaseConnector
     {
         $userLastNameArr = $this->connect()->query("SELECT * FROM users")->fetchAll(PDO::FETCH_ASSOC);
 //        $array = var_export($stmt);
-        foreach ($userLastNameArr as $row)
-        {
+        foreach ($userLastNameArr as $row) {
             echo $row['last_name'] . "\n";
         }
     }
 
-    public function insertUserInfo() {
+    public function insertUserInfo()
+    {
 
     }
 
