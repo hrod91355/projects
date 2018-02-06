@@ -6,6 +6,7 @@ Slowly building up a portfolio of automation scripts done on my spare time in or
   * MySql DB
   * MAMP Web Server
   * Github
+  * JSON Server for API testing
   
 * PHP:
   * PHP Storm
