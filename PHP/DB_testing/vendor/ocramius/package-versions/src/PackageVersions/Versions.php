@@ -12,6 +12,7 @@ final class Versions
 {
     const ROOT_PACKAGE_NAME = '__root__';
     const VERSIONS = array (
+  'fzaninotto/faker' => 'v1.7.1@d3ed4cc37051c1ca52d22d76b437d14809fc7e0d',
   'behat/behat' => 'v3.4.3@d60b161bff1b95ec4bb80bb8cb210ccf890314c2',
   'behat/gherkin' => 'v4.5.1@74ac03d52c5e23ad8abd5c5cce4ab0e8dc1b530a',
   'behat/mink' => 'v1.7.1@e6930b9c74693dff7f4e58577e1b1743399f3ff9',
@@ -45,7 +46,7 @@ final class Versions
   'symfony/yaml' => 'v4.0.4@ffc60bda1d4a00ec0b32eeabf39dc017bf480028',
   'zendframework/zend-code' => '3.3.0@6b1059db5b368db769e4392c6cb6cc139e56640d',
   'zendframework/zend-eventmanager' => '3.2.0@9d72db10ceb6e42fb92350c0cb54460da61bd79c',
-  '__root__' => 'dev-master@95d7f8672e1f4123ecd6b7dc1846cda55b975c13',
+  '__root__' => 'dev-php@1245cf40807231cb3697a00b630ef916a8d604ae',
 );
 
     private function __construct()

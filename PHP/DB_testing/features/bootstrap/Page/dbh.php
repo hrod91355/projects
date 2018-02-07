@@ -2,7 +2,7 @@
 
 
 
-class DataBaseConnector
+class Dbh
 {
 
     //more info on https://phpdelusions.net/pdo
