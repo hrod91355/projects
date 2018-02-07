@@ -41,6 +41,16 @@ class User extends Dbh
 
     public function updateUserInformation()
     {
+        $first_name = $GLOBALS[createdUserFirstName];
+        $user_pwd = "pwdHasBeenChanged";
+
+        $updateUser = $this->connect()->prepare("UPDATE users SET user_pwd=? WHERE first_name = ?");
+        $updateUser->execute([$user_pwd, $first_name]);
+
+        $stmt = $this ->connect()->prepare("SELECT user_pwd FROM users WHERE first_name = ?");
+        $stmt->execute([$first_name]);
+        print_r($stmt);
+
 
     }
 

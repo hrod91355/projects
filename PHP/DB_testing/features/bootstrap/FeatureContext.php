@@ -50,7 +50,7 @@ class FeatureContext extends User implements Context
      */
     public function thePasswordOfTheUserIsUpdated()
     {
-        throw new PendingException();
+        $this->updateUserInformation();
     }
 
     /**
