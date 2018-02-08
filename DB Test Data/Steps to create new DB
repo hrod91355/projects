@@ -19,7 +19,7 @@ CREATE TABLE users (
 
 INSERT INTO `users` (`user_uid`, `first_name`, `last_name`, `city`, `age`, `user_email`, `user_pwd`)
 VALUES
-	(1, 'Sarah', 'Jones', 'Denver', 35, 'sarahJones@email.com', '32145'),
-	(2, 'John', 'Rameriez', 'CO Springs', 23, 'johnRameriez@email.com', '54321'),
-	(3, 'Joe', 'Smith', 'San Jose', 32, 'joeSmith@email.com', '12345');
+	('Sarah', 'Jones', 'Denver', 35, 'sarahJones@email.com', '32145'),
+	('John', 'Rameriez', 'CO Springs', 23, 'johnRameriez@email.com', '54321'),
+	('Joe', 'Smith', 'San Jose', 32, 'joeSmith@email.com', '12345');
 
