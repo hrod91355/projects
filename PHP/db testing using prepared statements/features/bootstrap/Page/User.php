@@ -9,7 +9,7 @@ include '../../../vendor/fzaninotto/faker/src/autoload.php';
 
 //Global elements for validation
 $createdUserFirstName = '';
-$changedPassword = "pwdHasBeenChanged";
+$changedPassword = '';
 
 class User extends Dbh
 {
@@ -51,7 +51,7 @@ class User extends Dbh
     {
         $first_name = $GLOBALS[createdUserFirstName];
         $user_pwd = "pwdHasBeenChanged";
-//        $user_pwd = $GLOBALS[changedPassword];
+        $GLOBALS[changedPassword] = $user_pwd;
 
         $updateUser = $this->connect()->prepare("UPDATE users SET user_pwd=? WHERE first_name = ?");
         $updateUser->execute([$user_pwd, $first_name]);
@@ -59,22 +59,62 @@ class User extends Dbh
     }
 
     public function validateUserPasswordChange()
-    {
-        $stmt = $this->connect()->prepare("SELECT user_pwd FROM users WHERE first_name = ?");
-        $stmt->execute([$first_name]);
-        if ($stmt->rowCount()) {
-            while ($row = $stmt->fetch()) {
-                echo "User's password has been changed to " . $user_pwd . ".";
-            }
-        } else {
-            throw new Exception("Password has not been changed.");
-        }
 
+    {
+        $first_name = $GLOBALS[createdUserFirstName];
+        $newPassword = $GLOBALS[changedPassword];
+        try {
+            $stmt = $this->connect()->prepare("SELECT user_pwd FROM users WHERE first_name = ?");
+            $stmt->execute([$first_name]);
+            $rows = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if (strpos($rows[user_pwd], $newPassword) !== false) {
+                echo "Password has been changed to " . $newPassword . ".";
+
+            } else {
+                throw new Exception("Password has not been changed.");
+            }
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+
+        }
     }
 
     public function deleteUserFromDB()
     {
+        $first_name = $GLOBALS[createdUserFirstName];
 
+        //Delete new user from DB
+
+        try {
+            $stmt = $this->connect()->prepare("DELETE FROM users WHERE first_name=?");
+            $stmt->execute([$first_name]);
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+
+    public function validateUserHasBeenDeleted()
+    {
+        $first_name = $GLOBALS[createdUserFirstName];
+
+        try {
+            $stmt = $this->connect()->prepare("SELECT * FROM users WHERE first_name=?");
+            $stmt->execute([$first_name]);
+            $row_count = $stmt->rowCount();
+
+            if ($row_count == 0) {
+                echo "User has been deleted.";
+            } else {
+                throw new Exception("User with first name " . $first_name . " has not been deleted.");
+            }
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
     }
 
 }

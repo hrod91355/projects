@@ -56,7 +56,7 @@ class FeatureContext extends User implements Context
      */
     public function theDbaWillSeeThePasswordForTheUserUpdated()
     {
-        throw new PendingException();
+        $this->validateUserPasswordChange();
     }
 
     /**
@@ -64,7 +64,7 @@ class FeatureContext extends User implements Context
      */
     public function theUserHasBeenDeleted()
     {
-        throw new PendingException();
+        $this->deleteUserFromDB();
     }
 
 
@@ -73,6 +73,6 @@ class FeatureContext extends User implements Context
      */
     public function theDbaWillNoLongerSeeTheDeletedUser()
     {
-        throw new PendingException();
+        $this->validateUserHasBeenDeleted();
     }
 }
