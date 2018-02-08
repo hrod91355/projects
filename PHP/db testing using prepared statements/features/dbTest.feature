@@ -8,13 +8,13 @@ Feature: DB data update
 
   Scenario: Creating a new user
     When new user is created
-    Then the dba will see the changes in the db
+    Then the dba will see the new user in the db
 
   Scenario: Updating user information
     When the password of the user is updated
-    Then the dba will see the changes in the db
+    Then the dba will see the password for the user updated
 
   Scenario: Deleting user
     When the user has been deleted
-    Then the dba will see the changes in the db
+    Then the dba will no longer see the deleted user
 
