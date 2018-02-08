@@ -7,8 +7,13 @@
  */
 include '../../../vendor/fzaninotto/faker/src/autoload.php';
 
+//Global elements for validation
+$createdUserFirstName = '';
+$changedPassword = "pwdHasBeenChanged";
+
 class User extends Dbh
 {
+
     public function createNewUser()
     {
         $faker = Faker\Factory::create();
@@ -32,25 +37,43 @@ class User extends Dbh
         $stmt->execute([$first_name]);
         if ($stmt->rowCount()) {
             while ($row = $stmt->fetch()) {
-                echo $row['age'];
+                echo "New user with first name of " . $first_name . " has been created.";
             }
         } else {
             throw new Exception("New user with first name of " . $first_name . " is not in the DB");
         }
     }
 
+    /**
+     *
+     */
     public function updateUserInformation()
     {
         $first_name = $GLOBALS[createdUserFirstName];
         $user_pwd = "pwdHasBeenChanged";
+//        $user_pwd = $GLOBALS[changedPassword];
 
         $updateUser = $this->connect()->prepare("UPDATE users SET user_pwd=? WHERE first_name = ?");
         $updateUser->execute([$user_pwd, $first_name]);
 
-        $stmt = $this ->connect()->prepare("SELECT user_pwd FROM users WHERE first_name = ?");
-        $stmt->execute([$first_name]);
-        print_r($stmt);
+    }
 
+    public function validateUserPasswordChange()
+    {
+        $stmt = $this->connect()->prepare("SELECT user_pwd FROM users WHERE first_name = ?");
+        $stmt->execute([$first_name]);
+        if ($stmt->rowCount()) {
+            while ($row = $stmt->fetch()) {
+                echo "User's password has been changed to " . $user_pwd . ".";
+            }
+        } else {
+            throw new Exception("Password has not been changed.");
+        }
+
+    }
+
+    public function deleteUserFromDB()
+    {
 
     }
 

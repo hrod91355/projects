@@ -9,9 +9,6 @@ use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
 include 'Page/dbh.php';
 include 'Page/User.php';
 
-//Global elements for validation
-$createdUserFirstName='';
-
 
 class FeatureContext extends User implements Context
 {
@@ -38,9 +35,9 @@ class FeatureContext extends User implements Context
     }
 
     /**
-     * @Then the dba will see the changes in the db
+     * @Then the dba will see the new user in the db
      */
-    public function theDbaWillSeeTheChangesInTheDb()
+    public function theDbaWillSeeTheNewUserInTheDb()
     {
         $this->validateUserIsShowingInDB();
     }
@@ -53,10 +50,28 @@ class FeatureContext extends User implements Context
         $this->updateUserInformation();
     }
 
+
+    /**
+     * @Then the dba will see the password for the user updated
+     */
+    public function theDbaWillSeeThePasswordForTheUserUpdated()
+    {
+        throw new PendingException();
+    }
+
     /**
      * @When the user has been deleted
      */
     public function theUserHasBeenDeleted()
+    {
+        throw new PendingException();
+    }
+
+
+    /**
+     * @Then the dba will no longer see the deleted user
+     */
+    public function theDbaWillNoLongerSeeTheDeletedUser()
     {
         throw new PendingException();
     }
