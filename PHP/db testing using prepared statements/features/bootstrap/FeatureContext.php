@@ -18,6 +18,7 @@ class FeatureContext extends User implements Context
     public function __construct()
     {
     }
+
     /**
      * @Given A DBA is connected to the correct db with correct data showing
      */
@@ -47,6 +48,7 @@ class FeatureContext extends User implements Context
      */
     public function thePasswordOfTheUserIsUpdated()
     {
+        $this->createNewUser();
         $this->updateUserInformation();
     }
 
@@ -63,7 +65,9 @@ class FeatureContext extends User implements Context
      * @When the user has been deleted
      */
     public function theUserHasBeenDeleted()
+
     {
+        $this->createNewUser();
         $this->deleteUserFromDB();
     }
 
@@ -72,7 +76,10 @@ class FeatureContext extends User implements Context
      * @Then the dba will no longer see the deleted user
      */
     public function theDbaWillNoLongerSeeTheDeletedUser()
+
     {
         $this->validateUserHasBeenDeleted();
+        $this->cleanDB();
     }
+
 }
