@@ -51,6 +51,10 @@ class ComposerStaticInit518657d3a12af1b9fba97f1bb65b3e7f
             'GuzzleHttp\\' => 11,
             'Goutte\\' => 7,
         ),
+        'F' => 
+        array (
+            'Faker\\' => 6,
+        ),
         'B' => 
         array (
             'Behat\\Mink\\Driver\\' => 18,
@@ -146,6 +150,10 @@ class ComposerStaticInit518657d3a12af1b9fba97f1bb65b3e7f
         'Goutte\\' => 
         array (
             0 => __DIR__ . '/..' . '/fabpot/goutte/Goutte',
+        ),
+        'Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
         'Behat\\Mink\\Driver\\' => 
         array (

@@ -1,10 +1,9 @@
 default:
-
   extensions:
     Behat\MinkExtension:
 #      goutte: ~
       selenium2:
-        wd_host: 'http://192.168.0.109:4444/wd/hub'
-      base_url: https://www.edmunds.com
+        wd_host: 'http://192.168.0.111:4444/wd/hub'
+      base_url: https://www.psychologytoday.com/us/therapists
       browser_name: chrome
     SensioLabs\Behat\PageObjectExtension: ~

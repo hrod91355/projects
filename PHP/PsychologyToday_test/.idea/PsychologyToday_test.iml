@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/behat" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/gherkin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/mink" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/mink-browserkit-driver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/mink-extension" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/mink-goutte-driver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/mink-selenium2-driver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/transliterator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/container-interop/container-interop" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fabpot/goutte" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fzaninotto/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/instaclick/php-webdriver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ocramius/package-versions" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ocramius/proxy-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/se/selenium-server-standalone" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sensiolabs/behat-page-object-extension" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/browser-kit" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/class-loader" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/config" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dependency-injection" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dom-crawler" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-code" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-eventmanager" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/behat/behat" />
+          <root url="file://$MODULE_DIR$/vendor/behat/gherkin" />
+          <root url="file://$MODULE_DIR$/vendor/behat/mink" />
+          <root url="file://$MODULE_DIR$/vendor/behat/mink-browserkit-driver" />
+          <root url="file://$MODULE_DIR$/vendor/behat/mink-extension" />
+          <root url="file://$MODULE_DIR$/vendor/behat/mink-goutte-driver" />
+          <root url="file://$MODULE_DIR$/vendor/behat/mink-selenium2-driver" />
+          <root url="file://$MODULE_DIR$/vendor/behat/transliterator" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/container-interop/container-interop" />
+          <root url="file://$MODULE_DIR$/vendor/fabpot/goutte" />
+          <root url="file://$MODULE_DIR$/vendor/fzaninotto/faker" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/vendor/instaclick/php-webdriver" />
+          <root url="file://$MODULE_DIR$/vendor/ocramius/package-versions" />
+          <root url="file://$MODULE_DIR$/vendor/ocramius/proxy-manager" />
+          <root url="file://$MODULE_DIR$/vendor/psr/container" />
+          <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
+          <root url="file://$MODULE_DIR$/vendor/se/selenium-server-standalone" />
+          <root url="file://$MODULE_DIR$/vendor/sensiolabs/behat-page-object-extension" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/browser-kit" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/class-loader" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/config" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/console" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/dependency-injection" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/dom-crawler" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/filesystem" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/translation" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/vendor/zendframework/zend-code" />
+          <root url="file://$MODULE_DIR$/vendor/zendframework/zend-eventmanager" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/behat/behat" />
+          <root url="file://$MODULE_DIR$/vendor/behat/gherkin" />
+          <root url="file://$MODULE_DIR$/vendor/behat/mink" />
+          <root url="file://$MODULE_DIR$/vendor/behat/mink-browserkit-driver" />
+          <root url="file://$MODULE_DIR$/vendor/behat/mink-extension" />
+          <root url="file://$MODULE_DIR$/vendor/behat/mink-goutte-driver" />
+          <root url="file://$MODULE_DIR$/vendor/behat/mink-selenium2-driver" />
+          <root url="file://$MODULE_DIR$/vendor/behat/transliterator" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/container-interop/container-interop" />
+          <root url="file://$MODULE_DIR$/vendor/fabpot/goutte" />
+          <root url="file://$MODULE_DIR$/vendor/fzaninotto/faker" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/vendor/instaclick/php-webdriver" />
+          <root url="file://$MODULE_DIR$/vendor/ocramius/package-versions" />
+          <root url="file://$MODULE_DIR$/vendor/ocramius/proxy-manager" />
+          <root url="file://$MODULE_DIR$/vendor/psr/container" />
+          <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
+          <root url="file://$MODULE_DIR$/vendor/se/selenium-server-standalone" />
+          <root url="file://$MODULE_DIR$/vendor/sensiolabs/behat-page-object-extension" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/browser-kit" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/class-loader" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/config" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/console" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/dependency-injection" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/dom-crawler" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/filesystem" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/translation" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/vendor/zendframework/zend-code" />
+          <root url="file://$MODULE_DIR$/vendor/zendframework/zend-eventmanager" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

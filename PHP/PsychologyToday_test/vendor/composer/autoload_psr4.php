@@ -28,6 +28,7 @@ return array(
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'Goutte\\' => array($vendorDir . '/fabpot/goutte/Goutte'),
+    'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'Behat\\Mink\\Driver\\' => array($vendorDir . '/behat/mink-browserkit-driver/src', $vendorDir . '/behat/mink-goutte-driver/src', $vendorDir . '/behat/mink-selenium2-driver/src'),
     'Behat\\Mink\\' => array($vendorDir . '/behat/mink/src'),
 );
