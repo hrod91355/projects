@@ -16,18 +16,24 @@ class User extends Dbh
 
     public function createNewUser()
     {
-        $faker = Faker\Factory::create();
-        $first_name = $faker->firstName;
-        $last_name = $faker->lastName;
-        $city = $faker->city;
-        $age = $faker->numberBetween($min = 18, $max = 100);
-        $user_email = $faker->email;
-        $user_pwd = $faker->password;
+        try {
 
-        $GLOBALS[createdUserFirstName] = $first_name;
-        $stmt = $this->connect()->prepare("INSERT INTO users(first_name, last_name, city, age, user_email, user_pwd)
+            $faker = Faker\Factory::create();
+            $first_name = $faker->firstName;
+            $last_name = $faker->lastName;
+            $city = $faker->city;
+            $age = $faker->numberBetween($min = 18, $max = 100);
+            $user_email = $faker->email;
+            $user_pwd = $faker->password;
+
+            $GLOBALS[createdUserFirstName] = $first_name;
+            $stmt = $this->connect()->prepare("INSERT INTO users(first_name, last_name, city, age, user_email, user_pwd)
                  VALUES (?,?,?,?,?,?)");
-        $stmt->execute([$first_name, $last_name, $city, $age, $user_email, $user_pwd]);
+            $stmt->execute([$first_name, $last_name, $city, $age, $user_email, $user_pwd]);
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
     }
 
     public function validateUserIsShowingInDB()
@@ -107,7 +113,7 @@ class User extends Dbh
             $row_count = $stmt->rowCount();
 
             if ($row_count == 0) {
-                echo "User has been deleted.";
+                echo "User with first name " . $first_name . " has been deleted.";
             } else {
                 throw new Exception("User with first name " . $first_name . " has not been deleted.");
             }
@@ -115,6 +121,26 @@ class User extends Dbh
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
+
     }
+
+    public function cleanDB()
+    {
+        try {
+            $stmt = $this->connect()->prepare("TRUNCATE TABLE users");
+            $stmt->execute();
+            $row_count = $stmt->rowCount();
+
+            if ($row_count == 0) {
+                echo "DB has been cleaned.";
+            } else {
+                throw new Exception("Data is still showing in the DB.");
+            }
+
+        } catch (PDOException $e) {
+            $e->getMessage();
+        }
+    }
+
 
 }
